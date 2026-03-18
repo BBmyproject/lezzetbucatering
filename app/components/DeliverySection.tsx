@@ -128,7 +128,7 @@ export default function DeliverySection() {
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#ec5600] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f58220] flex items-center justify-center">
                   <IoTimeOutline className="text-white text-lg" />
                   </div>
                   <div>
@@ -146,7 +146,7 @@ export default function DeliverySection() {
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#ec5600] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f58220] flex items-center justify-center">
                     <RiDiscountPercentLine className="text-white text-lg" />
                   </div>
                   <div>

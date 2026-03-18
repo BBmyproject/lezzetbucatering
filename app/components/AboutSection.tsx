@@ -77,10 +77,10 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
                 <div className="flex items-center gap-3">
                   <FaPhoneAlt className="text-white text-base md:text-lg flex-shrink-0" />
                   <a
-                    href="tel:+905551234567"
+                    href="tel:+905434566278"
                     className="text-white text-sm md:text-base hover:opacity-80 transition-opacity font-sans"
                   >
-                    +90 555 123 45 67
+                    +90 543 456 62 78
                   </a>
                 </div>
 
@@ -88,10 +88,10 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
                 <div className="flex items-center gap-3">
                   <FiMail className="text-white text-base md:text-lg flex-shrink-0" />
                   <a
-                    href="mailto:info@lezzetbucatring.com"
+                    href="mailto:lezzetbucatering@gmail.com"
                     className="text-white text-sm md:text-base hover:opacity-80 transition-opacity font-sans"
                   >
-                    info@lezzetbucatring.com
+                    lezzetbucatering@gmail.com
                   </a>
                 </div>
 
@@ -99,7 +99,7 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
                 <div className="flex items-start gap-3">
                   <HiLocationMarker className="text-white text-base md:text-lg flex-shrink-0 mt-1" />
                   <p className="text-white text-sm md:text-base font-sans">
-                    İstanbul, Türkiye
+                    Zekeriyaköy Sarıyer/İstanbul
                   </p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
               >
                 <Link
                   href="/about"
-                  className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:border-[#eb5600] hover:text-white transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-fit"
+                  className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:border-[#f58220] hover:text-white transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-fit"
                 >
                   <span className="relative z-10 font-bold">Hakkımızda</span>
                   <div className="price-button-hover" />

@@ -87,7 +87,7 @@ export default function AboutFeatures() {
   ];
 
   return (
-    <section ref={sectionRef} className="bg-white py-20">
+    <section ref={sectionRef} className="bg-[#f9f9f7] py-20">
       <div className="container mx-auto max-w-[1320px] px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (

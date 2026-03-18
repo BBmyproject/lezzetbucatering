@@ -40,10 +40,10 @@ export default function Header() {
               <div className="flex items-center gap-2">
                 <FaPhoneAlt className="text-white text-base" />
                 <a
-                  href="tel:+905551234567"
+                  href="tel:+905434566278"
                   className="hidden md:block text-white text-base hover:opacity-80 transition-opacity"
                 >
-                  +90 555 123 45 67
+                  +90 543 456 62 78
                 </a>
               </div>
 
@@ -51,10 +51,10 @@ export default function Header() {
               <div className="flex items-center gap-2">
                 <FiMail className="text-white text-base" />
                 <a
-                  href="mailto:info@lezzetbucatring.com"
+                  href="mailto:lezzetbucatering@gmail.com"
                   className="hidden md:block text-white text-base hover:opacity-80 transition-opacity"
                 >
-                  info@lezzetbucatring.com
+                  lezzetbucatering@gmail.com
                 </a>
               </div>
             </div>
@@ -93,8 +93,18 @@ export default function Header() {
           <div className="flex items-center justify-between py-4 md:py-7">
             {/* Sol - Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-secondary font-bold">
-                Logo
+              <Link
+                href="/"
+                className="flex items-center"
+                aria-label="Lezzet Bu Catering - Ana sayfa"
+              >
+                <img
+                  src="/logo.png"
+                  alt="Lezzet Bu Catering"
+                  className="h-9 w-auto max-h-11 object-contain object-left md:h-12 md:max-h-[52px]"
+                  width={180}
+                  height={52}
+                />
               </Link>
             </div>
 
@@ -120,7 +130,7 @@ export default function Header() {
               <div className="hidden md:block flex-shrink-0">
                 <Link
                   href="/contact"
-                  className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#ec5600] transition-colors duration-300 font-sans text-base font-medium overflow-hidden"
+                  className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#f58220] transition-colors duration-300 font-sans text-base font-medium overflow-hidden"
                 >
                   <span className="relative z-10 font-bold">Fiyat Al</span>
                   <div className="price-button-hover" />
@@ -153,9 +163,16 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="text-2xl font-secondary font-bold text-dark"
+                className="flex items-center"
+                aria-label="Lezzet Bu Catering - Ana sayfa"
               >
-                Logo
+                <img
+                  src="/logo.png"
+                  alt="Lezzet Bu Catering"
+                  className="h-9 w-auto max-h-10 object-contain object-left"
+                  width={160}
+                  height={44}
+                />
               </Link>
               <button
                 onClick={closeMenu}
@@ -168,13 +185,13 @@ export default function Header() {
 
             {/* Navigation Links */}
             <nav className="flex-1 px-4 py-8">
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-1 md:gap-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
                       onClick={closeMenu}
-                      className="text-xl text-dark font-sans font-medium hover:text-[#ec5600] transition-colors block py-2"
+                      className="text-base md:text-xl text-dark font-sans font-medium hover:text-[#f58220] transition-colors block py-2"
                     >
                       {link.name}
                     </Link>
@@ -188,7 +205,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#ec5600] transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-full justify-center"
+                className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#f58220] transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-full justify-center"
               >
                 <span className="relative z-10 font-bold">Fiyat Al</span>
                 <div className="price-button-hover" />

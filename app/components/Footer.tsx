@@ -7,16 +7,23 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#2c2f24] border-t border-gray-200 mt-16">
+    <footer className="bg-[#2c2f24] border-t border-gray-200 ">
       <div className="container mx-auto max-w-[1320px] px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Sol - Logo ve kısa metin */}
           <div className="space-y-3">
             <Link
               href="/"
-              className="text-2xl font-secondary font-bold text-white"
+              className="inline-flex items-center"
+              aria-label="Lezzet Bu Catering - Ana sayfa"
             >
-              Lezzet Bu Catring
+              <img
+                src="/footer-logo.png"
+                alt="Lezzet Bu Catering"
+                className="h-11 w-auto max-w-[220px] object-contain object-left opacity-95 hover:opacity-100 transition-opacity"
+                width={200}
+                height={48}
+              />
             </Link>
             <p className="text-md text-[#adb29e] font-sans max-w-xs">
               Etkinlikleriniz için taze, lezzetli ve profesyonel catering
@@ -30,27 +37,27 @@ export default function Footer() {
               <ul className="flex flex-col gap-3 text-sm font-sans text-[#dbdfd0]">
                 <h2 className="text-lg font-semibold text-white mb-4">Sayfalar</h2>
                 <li>
-                  <Link href="/" className="hover:text-[#ec5600] transition-colors">
+                  <Link href="/" className="hover:text-[#f58220] transition-colors">
                     Ana Sayfa
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/about"
-                    className="hover:text-[#ec5600] transition-colors"
+                    className="hover:text-[#f58220] transition-colors"
                   >
                     Hakkımızda
                   </Link>
                 </li>
                 <li>
-                  <Link href="/menu" className="hover:text-[#ec5600] transition-colors">
+                  <Link href="/menu" className="hover:text-[#f58220] transition-colors">
                     Menü
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/hygiene"
-                    className="hover:text-[#ec5600] transition-colors"
+                    className="hover:text-[#f58220] transition-colors"
                   >
                     Hijyen
                   </Link>
@@ -58,7 +65,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="hover:text-[#ec5600] transition-colors"
+                    className="hover:text-[#f58220] transition-colors"
                   >
                     İletişim
                   </Link>
@@ -72,26 +79,26 @@ export default function Footer() {
             <h2 className="text-lg font-semibold text-white mb-4">İletişim</h2>
             <div className="flex flex-col gap-3 text-sm font-sans text-[#dbdfd0]">
               <div className="group flex items-center gap-2 cursor-pointer">
-                <FaPhoneAlt className="text-white text-base group-hover:text-[#ec5600] transition-colors" />
+                <FaPhoneAlt className="text-white text-base group-hover:text-[#f58220] transition-colors" />
                 <a
-                  href="tel:+905551234567"
-                  className="text-[#dbdfd0] group-hover:text-[#ec5600] transition-colors"
+                  href="tel:+905434566278"
+                  className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors"
                 >
-                  +90 555 123 45 67
+                  +90 543 456 62 78
                 </a>
               </div>
               <div className="group flex items-center gap-2 cursor-pointer">
-                <FiMail className="text-white text-base group-hover:text-[#ec5600] transition-colors" />
+                <FiMail className="text-white text-base group-hover:text-[#f58220] transition-colors" />
                 <a
-                  href="mailto:info@lezzetbucatring.com"
-                  className="text-[#dbdfd0] group-hover:text-[#ec5600] transition-colors"
+                  href="mailto:lezzetbucatering@gmail.com"
+                  className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors"
                 >
-                  info@lezzetbucatring.com
+                  lezzetbucatering@gmail.com
                 </a>
               </div>
               <div className="group flex items-center gap-2">
-                <FaMapMarkerAlt className="text-white text-base group-hover:text-[#ec5600] transition-colors" />
-                <span className="text-[#dbdfd0] group-hover:text-[#ec5600] transition-colors">İstanbul, Türkiye</span>
+                <FaMapMarkerAlt className="text-white text-base group-hover:text-[#f58220] transition-colors" />
+                <span className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors">Zekeriyaköy Mah. 5. Cad. Eğrisel Blok No: 7 İç Kapı No: 22 Sarıyer/İstanbul</span>
               </div>
             </div>
           </div>

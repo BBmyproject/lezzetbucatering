@@ -21,13 +21,19 @@ export default function HeroBanner({ showButton = true }: HeroBannerProps) {
     <section className="relative w-full h-[calc(100vh-153px)] flex items-center justify-center overflow-hidden">
       {/* Arka Plan Görsel */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-banner.jpg"
-          alt="Hero Banner"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
+        <picture>
+          <source
+            srcSet="/images/hero-banner-mobile.jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="/images/hero-banner.jpg"
+            alt="Hero Banner"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+        </picture>
       </div>
 
       {/* İçerik */}
@@ -40,9 +46,9 @@ export default function HeroBanner({ showButton = true }: HeroBannerProps) {
             }`}
           >
             <h1 className="text-5xl md:text-7xl text-center lg:text-8xl font-secondary font-medium text-dark mb-6 leading-tight">
-              Zevkinize uygun
+              Aradağın Lezzet
               <br />
-              en iyi yemekler
+              BUrada !
             </h1>
           </div>
 
@@ -53,8 +59,7 @@ export default function HeroBanner({ showButton = true }: HeroBannerProps) {
             }`}
           >
             <p className="text-lg md:text-xl text-center text-dark max-w-2xl mx-auto mb-8 font-sans">
-              Discover delectable cuisine and unforgettable moments in our
-              welcoming, culinary haven.
+              Şirketinizin ihtiyaçlarına özel, kaliteli ve sağlıklı yemek seçenekleriyle çalışanlarınıza en iyi hizmeti sunun.
             </p>
           </div>
 
@@ -67,7 +72,7 @@ export default function HeroBanner({ showButton = true }: HeroBannerProps) {
             >
               <Link
                 href="/contact"
-                className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#eb5600] transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-fit"
+                className="group flex relative border-[1.5px] border-dark bg-transparent text-dark py-3 px-6 rounded-[118px] hover:text-white hover:border-[#f58220] transition-colors duration-300 font-sans text-base font-medium overflow-hidden w-fit"
               >
                 <span className="relative z-10 font-bold">Fiyat Al</span>
                 <div className="price-button-hover" />

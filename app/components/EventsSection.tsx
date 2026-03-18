@@ -28,10 +28,10 @@ const events: EventCard[] = [
       'Şirket bünyesinde Yerinde Üretim talebinde bulunan müşterilerinin ihtiyaçlarına cevap vermek için, ilk olarak yemek üretimi yapılacak yeri',
   },
   {
-    image: '/images/event-4.png',
-    title: 'Şantiye Yemeği',
+    image: '/images/event-4.webp',
+    title: 'Hijyen & Gıda Güvenliği',
     description:
-      'İstanbulun her noktasındaki şantiyeler için özel olarak tasarlanmış, besleyici ve doyurucu şantiye yemeği catering servisi sunuyoruz.',
+      'Tüm üretim süreçlerimizde uluslararası hijyen standartlarını esas alıyor, düzenli denetimler ve kalite kontrolleri ile güvenli, sağlıklı ve yüksek standartlarda yemek hizmeti sunuyoruz.',
   },
 ];
 

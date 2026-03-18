@@ -50,11 +50,68 @@ export default function ContactPage() {
           <p
             className={`fade-up-contact-subtitle ${
               isLoaded ? 'fade-up-visible' : ''
-            } text-base md:text-lg text-[#495460] font-sans leading-relaxed max-w-2xl mx-auto`}
+            } text-base md:text-lg text-dark font-sans leading-relaxed max-w-2xl mx-auto`}
           >
             Daha kaliteli bir hizmet için bizimle iletişime geçebilirsiniz. 
             Sorularınız, önerileriniz veya rezervasyon talepleriniz için aşağıdaki formu doldurabilirsiniz.
           </p>
+        </div>
+
+        {/* İletişim Bilgileri */}
+        <div className="mt-12 pt-8 max-w-4xl mx-auto pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-items-center">
+            {/* Telefon */}
+            <div
+              className={`fade-up-contact-card ${
+                isLoaded ? 'fade-up-visible' : ''
+              }`}
+              style={{ transitionDelay: '0s' }}
+            >
+              <h3 className="text-lg md:text-xl font-bold text-dark mb-2 font-sans">
+                Telefon
+              </h3>
+              <a
+                href="tel:+905434566278"
+                className="text-lg md:text-xl text-[#f58220] font-sans font-bold hover:underline transition-colors"
+              >
+                +90 543 456 62 78
+              </a>
+            </div>
+
+            {/* Mail */}
+            <div
+              className={`fade-up-contact-card ${
+                isLoaded ? 'fade-up-visible' : ''
+              }`}
+              style={{ transitionDelay: '0.1s' }}
+            >
+              <h3 className="text-lg md:text-xl font-bold text-dark mb-2 font-sans">
+                Mail
+              </h3>
+              <a
+                href="mailto:lezzetbucatering@gmail.com"
+                className="text-base md:text-xl text-dark font-sans hover:text-[#f58220] transition-colors"
+              >
+                lezzetbucatering@gmail.com
+              </a>
+            </div>
+
+            {/* Adres */}
+            <div
+              className={`fade-up-contact-card ${
+                isLoaded ? 'fade-up-visible' : ''
+              }`}
+              style={{ transitionDelay: '0.2s' }}
+            >
+              <h3 className="text-lg md:text-xl font-bold text-dark mb-2 font-sans">
+                Adres
+              </h3>
+              <p className="text-base md:text-xl leading-relaxed text-dark font-sans">
+                Zekeriyaköy Mah. 5. Cad. Eğrisel Blok No: 7 İç Kapı No: 22
+                Sarıyer/İstanbul
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Form Bölümü */}
@@ -83,7 +140,7 @@ export default function ContactPage() {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans"
                   placeholder="Adınız"
                 />
               </div>
@@ -101,7 +158,7 @@ export default function ContactPage() {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans"
                   placeholder="Soyadınız"
                 />
               </div>
@@ -122,7 +179,7 @@ export default function ContactPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans"
                   placeholder="Telefon Numaranız"
                 />
               </div>
@@ -140,7 +197,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans"
                   placeholder="Email Adresiniz"
                 />
               </div>
@@ -161,7 +218,7 @@ export default function ContactPage() {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans"
                 placeholder="Konu"
               />
             </div>
@@ -181,7 +238,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 rows={8}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ec5600] focus:border-transparent font-sans resize-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58220] focus:border-transparent font-sans resize-none"
                 placeholder="Mesajınızı buraya yazın..."
               />
             </div>
@@ -190,53 +247,12 @@ export default function ContactPage() {
             <div className="pt-1 md:pt-4">
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-[#ec5600] text-white font-bold rounded-lg hover:bg-[#d14a00] transition-colors duration-300 font-sans text-base"
+                className="w-full md:w-auto px-8 py-4 bg-[#f58220] text-white font-bold rounded-lg hover:bg-[#d14a00] transition-colors duration-300 font-sans text-base"
               >
                 Gönder
               </button>
             </div>
           </form>
-        </div>
-
-        {/* İletişim Bilgileri */}
-        <div className="mt-12 pt-8 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-items-center">
-                {/* Telefon */}
-                <div>
-                <h3 className="text-xl font-bold text-dark mb-2 font-sans">
-                    Telefon
-                </h3>
-                <a
-                    href="tel:+905551234567"
-                    className="text-xl text-[#ec5600] font-sans font-bold hover:underline transition-colors"
-                >
-                    +90 555 123 45 67
-                </a>
-                </div>
-
-                {/* Mail */}
-                <div>
-                <h3 className="text-xl font-bold text-dark mb-2 font-sans">
-                    Mail
-                </h3>
-                <a
-                    href="mailto:info@lezzetbucatring.com"
-                    className="text-lg text-[#495460] font-sans hover:text-[#ec5600] transition-colors"
-                >
-                    info@lezzetbucatring.com
-                </a>
-                </div>
-
-                {/* Adres */}
-                <div>
-                <h3 className="text-xl font-bold text-dark mb-2 font-sans">
-                    Adres
-                </h3>
-                <p className="text-lg text-[#495460] font-sans">
-                    İstanbul, Türkiye
-                </p>
-                </div>
-            </div>
         </div>
       </div>
     </main>

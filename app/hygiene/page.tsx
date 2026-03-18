@@ -17,7 +17,6 @@ export default function HijyenPage() {
   }, []);
 
   useEffect(() => {
-    // Intro section observer
     const introObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,12 +26,12 @@ export default function HijyenPage() {
         });
       },
       {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px',
+        threshold: 0,
+        rootMargin: '0px 0px 80px 0px',
       }
     );
 
-    // Main sections observer
+    // Grid bölümü mobilde çok uzun; threshold 0.2 = tüm section'un %20'si görünmeli → mobilde tetiklenmeyebilir
     const sectionsObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,8 +41,8 @@ export default function HijyenPage() {
         });
       },
       {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px',
+        threshold: 0,
+        rootMargin: '0px 0px 120px 0px',
       }
     );
 
@@ -56,50 +55,53 @@ export default function HijyenPage() {
     }
 
     return () => {
-      if (introRef.current) {
-        introObserver.unobserve(introRef.current);
-      }
-      if (sectionRef.current) {
-        sectionsObserver.unobserve(sectionRef.current);
-      }
+      introObserver.disconnect();
+      sectionsObserver.disconnect();
     };
   }, []);
 
   const sections = [
     {
       id: 0,
-      icon: <MdOutlineCleaningServices className="w-8 h-8 text-[#eb5600]" />,
+      icon: <MdOutlineCleaningServices className="w-8 h-8 text-[#f58220]" />,
       title: 'Hijyen Standartları ve Sanitasyon Prosedürleri',
       content:
         'Catering hizmetlerinde hijyen, gıda güvenliğinin en temel gerekliliklerindendir. Mutfak ortamının ve kullanılan ekipmanların düzenli olarak temizlenmesi, gıdaların kontaminasyonunu önler. Çalışanların hijyen kurallarına uyması, eldiven ve maske gibi kişisel koruyucu ekipman kullanması sağlanmalıdır. Hijyen prosedürlerine uygun bir ortam yaratılarak, gıdaların güvenli şekilde hazırlanması ve sunulması garanti altına alınabilir.',
     },
     {
       id: 1,
-      icon: <MdOutlineFoodBank className="w-8 h-8 text-[#eb5600]" />,
+      icon: <MdOutlineFoodBank className="w-8 h-8 text-[#f58220]" />,
       title: 'Gıda Saklama ve Isı Kontrolü',
       content:
         'Catering hizmetlerinde gıdaların doğru koşullarda saklanması ve uygun sıcaklıklarda sunulması, besin güvenliği için büyük önem taşır. Soğuk zincirin korunması, bozulabilir ürünlerin doğru sıcaklıklarda saklanması ve sıcak yemeklerin gerekli ısılarda servis edilmesi, bakteri üremesini önler. Özellikle çiğ et ve süt ürünlerinin uygun şartlarda saklanması, gıda kaynaklı hastalıkları önlemek için kritik bir adımdır.',
     },
     {
       id: 2,
-      icon: <MdOutlineShield className="w-8 h-8 text-[#eb5600]" />,
+      icon: <MdOutlineShield className="w-8 h-8 text-[#f58220]" />,
       title: 'Çapraz Bulaşmayı Önleme',
       content:
         'Çapraz bulaşma, farklı gıdaların birbirine teması ile oluşan bir kontaminasyon türüdür ve catering hizmetlerinde sıkça karşılaşılan bir risktir. Bu durumu önlemek için çiğ ve pişmiş gıdaların ayrı tutulması, farklı kesim tahtaları ve bıçaklar kullanılması önemlidir. Ayrıca, alerjen içeren gıdaların ayrı yerlerde hazırlanması, çapraz bulaşmanın önlenmesinde etkili bir uygulamadır. Bu şekilde, müşterilere güvenli ve sağlıklı bir yemek deneyimi sunulabilir.',
     },
     {
       id: 3,
-      icon: <MdOutlineSchool className="w-8 h-8 text-[#eb5600]" />,
+      icon: <MdOutlineSchool className="w-8 h-8 text-[#f58220]" />,
       title: 'Çalışan Eğitimi ve Denetimler',
       content:
         'Catering hizmetlerinde görev yapan personelin sağlık ve güvenlik konularında bilinçlendirilmesi, hizmetin kalitesini doğrudan etkiler. Gıda güvenliği, hijyen standartları ve acil durum prosedürleri gibi konularda eğitimler verilmeli ve düzenli olarak denetimler yapılmalıdır. Eğitimli çalışanlar, hijyen kurallarına uyma konusunda daha dikkatli davranır ve hizmet kalitesinin devamlılığını sağlar. Ayrıca, düzenli denetimler ile hijyen ve güvenlik standartlarının sürdürülebilirliği sağlanabilir.',
     },
     {
       id: 4,
-      icon: <MdOutlineEmergency className="w-8 h-8 text-[#eb5600]" />,
+      icon: <MdOutlineEmergency className="w-8 h-8 text-[#f58220]" />,
       title: 'Acil Durum Planları ve İlk Yardım Hazırlıkları',
       content:
         'Gıda güvenliğini sağlamak kadar, olası acil durumlar için hazırlıklı olmak da önemlidir. Catering firmaları, yangın, elektrik kesintisi, ekipman arızası gibi durumlar için acil durum planlarına sahip olmalıdır. Ayrıca, çalışanların ilk yardım eğitimi alması ve mutfakta temel ilk yardım malzemelerinin bulundurulması, çalışan ve müşteri güvenliği açısından gereklidir. Acil durumlara hazırlıklı olmak, catering hizmetlerinin güvenilirliğini artırır ve müşteri memnuniyetini sağlar.',
+    },
+    {
+      id: 5,
+      icon: <MdOutlineShield className="w-8 h-8 text-[#f58220]" />,
+      title: 'Belgelerimiz ve Standartlarımız',
+      content:
+        'LezzetBU Catering, ulusal ve uluslararası gıda güvenliği standartlarına uyum sağlamak için düzenli olarak belgelendirme ve denetim süreçlerinden geçer. Mevcut ve hedeflenen belgelerimizi şeffaf bir şekilde paylaşarak, iş ortaklarımıza güven vermeyi amaçlıyoruz. ISO 22000 Gıda Güvenliği Yönetim Sistemi (mevcut veya hedef durum bilgisi). ISO 9001 Kalite Yönetim Sistemi ve ilgili iç denetim süreçleri. Yerel belediye ve ilgili resmi kurumların periyodik hijyen denetimleri. Personel hijyen eğitim sertifikaları ve zorunlu sağlık kontrolleri kayıtları. Talep eden kurumsal müşterilerimizle; güncel analiz raporları, denetim sonuçları ve sertifikalarımızı paylaşarak karar süreçlerini destekliyoruz.',
     },
   ];
 
