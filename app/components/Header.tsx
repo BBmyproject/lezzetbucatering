@@ -29,7 +29,7 @@ export default function Header() {
   ];
 
   return (
-    <header>
+    <header className='inline md:block'>
       {/* Header Top */}
       <div className="bg-[#4d592b] py-[6px] md:py-[9px]">
         <div className="container mx-auto max-w-[1320px] px-4">
@@ -159,7 +159,7 @@ export default function Header() {
         <div className="fixed inset-0 bg-white z-50 md:hidden">
           <div className="flex flex-col h-full">
             {/* Logo ve Close Button */}
-            <div className="px-4 py-6 border-b border-gray-200 flex items-center justify-between">
+            <div className="px-4 py-4 border-b border-gray-200 flex items-center justify-between">
               <Link
                 href="/"
                 onClick={closeMenu}

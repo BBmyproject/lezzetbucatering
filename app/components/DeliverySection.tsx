@@ -127,12 +127,12 @@ export default function DeliverySection() {
                   isVisible ? 'fade-up-visible' : ''
                 }`}
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f58220] flex items-center justify-center">
                   <IoTimeOutline className="text-white text-lg" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-dark">
+                    <h3 className="text-base md:text-xl font-medium text-dark">
                       Gün içi içinde teslimat
                     </h3>
                   </div>
@@ -145,12 +145,12 @@ export default function DeliverySection() {
                   isVisible ? 'fade-up-visible' : ''
                 }`}
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f58220] flex items-center justify-center">
                     <RiDiscountPercentLine className="text-white text-lg" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-dark">
+                    <h3 className="text-base md:text-xl font-medium text-dark">
                       En İyi Teklif ve Fiyatlar
                     </h3>
                   </div>

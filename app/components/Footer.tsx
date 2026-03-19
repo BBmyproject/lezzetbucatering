@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* İletişim Bilgileri */}
           <div>
-            <h2 className="text-lg font-semibold text-white mb-4">İletişim</h2>
+            <h2 className="text-lg font-semibold text-white mb-7">İletişim</h2>
             <div className="flex flex-col gap-3 text-sm font-sans text-[#dbdfd0]">
               <div className="group flex items-center gap-2 cursor-pointer">
                 <FaPhoneAlt className="text-white text-base group-hover:text-[#f58220] transition-colors" />
