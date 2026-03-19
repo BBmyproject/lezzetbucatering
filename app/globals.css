@@ -384,7 +384,7 @@ body {
 }
 
 .fade-up-contact-subtitle.fade-up-visible {
-  opacity: 1;
+  opacity: 1; 
   transform: translateY(0);
 }
 
