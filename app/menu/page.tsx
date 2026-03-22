@@ -50,14 +50,24 @@ const WEEKLY_EXAMPLES: string[][] = [
 
 const CATEGORY_LABELS = ['Çorba', 'Yardımcı', 'Ana Yemek', 'Tamamlayıcı'];
 
-/** 10 marka — public/images/brand-1.webp … brand-10.webp */
-const BRANDS: { name: string; logo: string }[] = Array.from(
-  { length: 10 },
-  (_, i) => ({
-    name: `Marka ${i + 1}`,
-    logo: `/images/brand-${i + 1}.webp`,
-  })
-);
+/** 10 marka — uzantılar sırayla: png, webp, png, png, webp, png, svg, svg, webp, png */
+const BRAND_LOGO_EXT = [
+  'png',
+  'webp',
+  'png',
+  'png',
+  'webp',
+  'png',
+  'svg',
+  'svg',
+  'webp',
+  'png',
+] as const;
+
+const BRANDS: { name: string; logo: string }[] = BRAND_LOGO_EXT.map((ext, i) => ({
+  name: `Marka ${i + 1}`,
+  logo: `/images/brand-${i + 1}.${ext}`,
+}));
 
 const BRAND_ROWS = [
   BRANDS.slice(0, 3),
@@ -146,7 +156,7 @@ export default function MenuPage() {
                 isVisible ? 'fade-up-visible' : ''
               } bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#dbdfd0]`}
             >
-              <h2 className="text-xl md:text-2xl font-secondary font-medium text-dark mb-5">
+              <h2 className="text-xl md:text-2xl font-medium text-dark mb-5">
                 {pkg.title}
               </h2>
               <ul className="space-y-3 font-sans text-dark">

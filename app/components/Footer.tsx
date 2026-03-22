@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { AiFillFacebook } from 'react-icons/ai';
-import { FaInstagram, FaMapMarkerAlt, FaPhoneAlt, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 export default function Footer() {
@@ -47,6 +46,14 @@ export default function Footer() {
                     className="hover:text-[#f58220] transition-colors"
                   >
                     Hakkımızda
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="hover:text-[#f58220] transition-colors"
+                  >
+                    Hizmetlerimiz
                   </Link>
                 </li>
                 <li>
@@ -110,13 +117,6 @@ export default function Footer() {
               <Link
                 href="#"
                 className="group text-white transition-all bg-[#737865] p-2 rounded-full hover:bg-white"
-                aria-label="Facebook"
-              >
-                <AiFillFacebook className="text-white text-xs group-hover:text-[#737865] transition" />
-              </Link>
-              <Link
-                href="#"
-                className="group text-white transition-all bg-[#737865] p-2 rounded-full hover:bg-white"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-white text-xs group-hover:text-[#737865] transition" />
@@ -124,9 +124,9 @@ export default function Footer() {
               <Link
                 href="#"
                 className="group text-white transition-all bg-[#737865] p-2 rounded-full hover:bg-white"
-                aria-label="Twitter"
+                aria-label="LinkedIn"
               >
-                <FaTwitter className="text-white text-xs group-hover:text-[#737865] transition" />
+                <FaLinkedin className="text-white text-xs group-hover:text-[#737865] transition" />
               </Link>
             </div>
           </div>

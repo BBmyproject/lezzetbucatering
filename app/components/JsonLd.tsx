@@ -36,6 +36,8 @@ export default function JsonLd() {
         knowsAbout: [
           'Şantiye catering',
           'Toplu yemek',
+          'İftar catering',
+          'Mevlit ikramı',
           'İstanbul catering',
         ],
       },

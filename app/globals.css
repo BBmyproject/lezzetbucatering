@@ -114,6 +114,10 @@ body {
   transition-delay: 1s;
 }
 
+.fade-up-card-5 {
+  transition-delay: 1.2s;
+}
+
 /* About Section Animasyonları */
 .fade-up-contact-card {
   opacity: 0;

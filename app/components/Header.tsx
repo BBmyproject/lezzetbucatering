@@ -4,8 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
-import { AiFillFacebook } from 'react-icons/ai';
-import { FaInstagram, FaTwitter, FaTimes } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTimes } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
@@ -23,6 +22,7 @@ export default function Header() {
   const navLinks = [
     { name: 'Ana Sayfa', href: '/' },
     { name: 'Hakkımızda', href: '/about' },
+    { name: 'Hizmetlerimiz', href: '/services' },
     { name: 'Menü', href: '/menu' },
     { name: 'Hijyen', href: '/hygiene' },
     { name: 'İletişim', href: '/contact' },
@@ -60,14 +60,7 @@ export default function Header() {
             </div>
 
             {/* Sağ Taraf - Social Media */}
-            <div className="flex items-center gap-1 ml-auto">
-              <Link
-                href="#"
-                className="group text-white transition-all bg-[#737865] p-1.5 md:p-2 rounded-full hover:bg-white"
-                aria-label="Facebook"
-              >
-                <AiFillFacebook className="text-white text-xs group-hover:text-[#737865] transition" />
-              </Link>
+            <div className="flex items-center gap-1.5 ml-auto">
               <Link
                 href="#"
                 className="group text-white transition-all bg-[#737865] p-1.5 md:p-2 rounded-full hover:bg-white"
@@ -78,9 +71,9 @@ export default function Header() {
               <Link
                 href="#"
                 className="group text-white transition-all bg-[#737865] p-1.5 md:p-2 rounded-full hover:bg-white"
-                aria-label="Twitter"
+                aria-label="LinkedIn"
               >
-                <FaTwitter className="text-white text-xs group-hover:text-[#737865] transition" />
+                <FaLinkedin className="text-white text-xs group-hover:text-[#737865] transition" />
               </Link>
             </div>
           </div>

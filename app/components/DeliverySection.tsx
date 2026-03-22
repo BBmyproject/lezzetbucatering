@@ -133,7 +133,7 @@ export default function DeliverySection() {
                   </div>
                   <div>
                     <h3 className="text-base md:text-xl font-medium text-dark">
-                      Gün içi içinde teslimat
+                      Gün içi zamanında teslimat
                     </h3>
                   </div>
                 </div>

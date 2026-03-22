@@ -10,19 +10,19 @@ interface EventCard {
 
 const events: EventCard[] = [
   {
-    image: '/images/event-1.jpeg',
-    title: 'Tabldot Yemek',
+    image: '/images/event-3.jpeg',
+    title: 'Tabldot Yemek (Paketli)',
     description:
       'Ana faaliyet alanlarımızdan biri olan Tabldot Yemek (Taşıma Yemek) hizmeti ile, işyerlerinize yemeklerinizi Lezzet Bu Catring Yemek güvencesiyle ulaştırıyoruz.',
   },
   {
     image: '/images/event-2.jpg',
-    title: 'Taşıma Paket',
+    title: 'Taşıma Yemek',
     description:
       'Taşıma paket yemek hizmetimizde yemekleriniz tek tek porsiyonlanır ve özenle paketlenir. Paket yemek servisi sayesinde hızlı ve lezzetli catering çözümleri sunarız.',
   },
   {
-    image: '/images/event-3.jpg',
+    image: '/images/event-1.jpeg',
     title: 'Yerinde Üretim',
     description:
       'Şirket bünyesinde Yerinde Üretim talebinde bulunan müşterilerinin ihtiyaçlarına cevap vermek için, ilk olarak yemek üretimi yapılacak yeri',

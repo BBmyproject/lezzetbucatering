@@ -1,52 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import {
-  MdBusiness,
-  MdConstruction,
-  MdEvent,
-  MdSchool,
-  MdLocalHospital,
-} from 'react-icons/md';
-
-interface ServiceCard {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const services: ServiceCard[] = [
-  {
-    icon: <MdBusiness className="text-[#4d592b] size-12" />,
-    title: 'Şirketler & Fabrikalar',
-    description:
-      'Ofis ve üretim tesislerinizde günlük personel yemekleri, vardiya düzeninize uygun tabldot ve taşıma paket çözümleriyle kesintisiz catering hizmeti sunuyoruz.',
-  },
-  {
-    icon: <MdConstruction className="text-[#4d592b] size-12" />,
-    title: 'Şantiye & İnşaat',
-    description:
-      'Saha koşullarına uygun, hijyen ve gıda güvenliği standartlarında üretilen öğünleri zamanında teslim ederek şantiye ekiplerinize doyurucu hizmet sağlıyoruz.',
-  },
-  {
-    icon: <MdEvent className="text-[#4d592b] size-12" />,
-    title: 'Organizasyon & Etkinlikler',
-    description:
-      'Açılış, davet, seminer ve kurumsal etkinlikleriniz için menüden servise kadar özel konsept catering ile misafirlerinize profesyonel bir deneyim sunuyoruz.',
-  },
-  {
-    icon: <MdSchool className="text-[#4d592b] size-12" />,
-    title: 'Okullar & Kreşler',
-    description:
-      'Yaş gruplarına uygun, dengeli ve besleyici menülerle öğrenci ve çocukların sağlıklı beslenmesine katkı sağlayan güvenilir yemek hizmeti veriyoruz.',
-  },
-  {
-    icon: <MdLocalHospital className="text-[#4d592b] size-12" />,
-    title: 'Sağlık Kuruluşları',
-    description:
-      'Hastane, poliklinik ve sağlık merkezlerinde personel ile hasta öğünleri için düzenli, kontrollü ve mevzuata uygun yemek çözümleri sunuyoruz.',
-  },
-];
+import { SERVICE_AREAS } from '@/lib/service-areas';
+import ServiceAreaIcon from './ServiceAreaIcon';
 
 export default function ServicesSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -84,41 +41,54 @@ export default function ServicesSection() {
         <div
           className={`fade-up-title ${
             isVisible ? 'fade-up-visible' : ''
-          } mb-16`}
+          } mb-6`}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-secondary font-medium text-dark text-center">
             Hizmet Alanlarımız
           </h2>
         </div>
+        <p
+          className={`fade-up-description mx-auto mb-16 max-w-2xl text-center font-sans text-base text-gray-600 ${
+            isVisible ? 'fade-up-visible' : ''
+          }`}
+        >
+          Tüm hizmet detaylarımız için{' '}
+          <Link
+            href="/services"
+            className="font-medium text-[#4d592b] underline decoration-[#4d592b]/30 underline-offset-2 transition hover:text-[#f58220] hover:decoration-[#f58220]/40"
+          >
+            Hizmetlerimiz
+          </Link>{' '}
+          sayfasını ziyaret edebilirsiniz.
+        </p>
 
-        {/* lg+: üst satır 3 kart, alt satır 2 kart ortada | md: 2 sütun | mobil: 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {services.map((service, index) => {
-            const row2Left = index === 3;
-            const row2Right = index === 4;
-            return (
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {SERVICE_AREAS.map((service, index) => (
             <div
-              key={index}
+              key={service.key}
               className={`fade-up-card fade-up-card-${index} ${
                 isVisible ? 'fade-up-visible' : ''
-              } lg:col-span-2 ${row2Left ? 'lg:col-start-2' : ''} ${
-                row2Right ? 'lg:col-start-4' : ''
               }`}
             >
-              <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col items-center text-center">
-                <div className="mb-6 flex justify-center w-[100px] h-[100px] rounded-full bg-[#4d592b12] items-center">
-                  {service.icon}
+              <Link
+                href={`/services/${service.slug}`}
+                className="group flex h-full flex-col items-center rounded-lg border border-gray-200 bg-white p-8 text-center transition-shadow duration-300 hover:shadow-lg"
+              >
+                <div className="mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#4d592b12] transition group-hover:bg-[#4d592b20]">
+                  <ServiceAreaIcon areaKey={service.key} />
                 </div>
-                <h3 className="text-xl font-bold text-dark mb-4 leading-snug">
+                <h3 className="mb-4 text-xl font-bold leading-snug text-dark transition group-hover:text-[#4d592b]">
                   {service.title}
                 </h3>
-                <p className="text-base text-gray-600 font-sans flex-grow">
+                <p className="mb-4 flex-grow font-sans text-base text-gray-600">
                   {service.description}
                 </p>
-              </div>
+                <span className="font-sans text-sm font-semibold text-[#f58220]">
+                  Detay →
+                </span>
+              </Link>
             </div>
-            );
-          })}
+          ))}
         </div>
       </div>
     </section>
