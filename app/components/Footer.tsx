@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#2c2f24] border-t border-gray-200 ">
       <div className="container mx-auto max-w-[1320px] px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sol - Logo ve kısa metin */}
           <div className="space-y-3">
             <Link
@@ -115,9 +115,10 @@ export default function Footer() {
             <h2 className="text-lg font-semibold text-white mb-4">Bizi Takip Edin</h2>
             <div className="flex items-center gap-2">
               <Link
-                href="#"
+                href="https://www.instagram.com/lezzetbucatering"
                 className="group text-white transition-all bg-[#737865] p-2 rounded-full hover:bg-white"
                 aria-label="Instagram"
+                target="_blank"
               >
                 <FaInstagram className="text-white text-xs group-hover:text-[#737865] transition" />
               </Link>
@@ -125,6 +126,7 @@ export default function Footer() {
                 href="#"
                 className="group text-white transition-all bg-[#737865] p-2 rounded-full hover:bg-white"
                 aria-label="LinkedIn"
+                target="_blank"
               >
                 <FaLinkedin className="text-white text-xs group-hover:text-[#737865] transition" />
               </Link>
