@@ -1,13 +1,11 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const MENU_PACKAGES = [
   {
     id: 0,
     title: "4'lü Menü",
-    image: '/images/menu-1.jpeg',
     items: [
       'Çorba',
       'Yardımcı Yemekler (Pirinç Pilavı vb.)',
@@ -18,7 +16,6 @@ const MENU_PACKAGES = [
   {
     id: 1,
     title: "5'li Menü",
-    image: '/images/menu-2.jpeg',
     items: [
       'Çorba',
       'Yardımcı Yemekler (Pirinç Pilavı vb.)',
@@ -30,7 +27,6 @@ const MENU_PACKAGES = [
   {
     id: 2,
     title: "6'lı Menü",
-    image: '/images/menu-3.jpeg',
     items: [
       'Çorba',
       'Yardımcı Yemekler (Pirinç Pilavı vb.)',
@@ -160,15 +156,6 @@ export default function MenuPage() {
                 isVisible ? 'fade-up-visible' : ''
               } bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#dbdfd0]`}
             >
-              <div className="relative mb-5 h-60 w-full overflow-hidden rounded-xl md:h-80">
-                <Image
-                  src={pkg.image}
-                  alt={pkg.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
               <h2 className="text-xl md:text-2xl font-medium text-dark mb-5">
                 {pkg.title}
               </h2>

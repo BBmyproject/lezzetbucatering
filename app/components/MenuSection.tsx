@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import { LuCookingPot } from 'react-icons/lu';
+import { PiBowlFood } from 'react-icons/pi';
 import { MdLocalDrink } from 'react-icons/md';
 import { LuSalad } from 'react-icons/lu';
 import { LuDessert } from 'react-icons/lu';
@@ -14,34 +16,42 @@ interface ServiceCard {
 }
 
 const services: ServiceCard[] = [
-    {
-      icon: (
-        <RiBowlLine className="text-[#4d592b] size-12" />
-        ),
-        title: 'Ana Yemek',
-        description: 'Özenle hazırlanan, taze ve doyurucu ana yemek seçeneklerimizle her davete lezzet katıyoruz.',
-    },
-    {
-      icon: (
-            <MdLocalDrink className="text-[#4d592b] size-12" />
-        ),
-        title: 'İçecek',
-        description: 'Yemeklerinize eşlik eden sıcak ve soğuk içecek alternatifleriyle menünüzü tamamlıyoruz.',
-    },
-    {
-      icon: (
-            <LuSalad className="text-[#4d592b] size-12" />
-        ),
-        title: 'Salata',
-        description: 'Taze sebzelerle hazırlanan hafif ve sağlıklı salata çeşitlerimizle sofralarınızı zenginleştiriyoruz.',
-    },
-    {
-      icon: (
-            <LuDessert className="text-[#4d592b] size-12" />
-        ),
-        title: 'Tatlı',
-        description: 'Özel günlerinizi tatlandıracak geleneksel ve modern tatlı seçenekleri sunuyoruz.',
-    },
+  {
+    icon: <RiBowlLine className="text-[#4d592b] size-12" />,
+    title: 'Çorba',
+    description:
+      'Günün menüsüne sıcak bir başlangıç sunan, mevsimine uygun malzemelerle hazırlanan çorba seçenekleri.',
+  },
+  {
+    icon: <PiBowlFood className="text-[#4d592b] size-12" />,
+    title: 'Yardımcı Yemekler',
+    description:
+      'Ana yemeği destekleyen pilav, makarna ve benzeri yardımcı yemeklerle dengeli ve doyurucu tabaklar.',
+  },
+  {
+    icon: <LuCookingPot className="text-[#4d592b] size-12" />,
+    title: 'Ana Yemek',
+    description:
+      'Özenle pişirilen etli, tavuklu veya sebzeli ana yemek seçenekleriyle her öğünde güçlü lezzet sunuyoruz.',
+  },
+  {
+    icon: <MdLocalDrink className="text-[#4d592b] size-12" />,
+    title: 'İçecek',
+    description:
+      'Menüye eşlik eden sıcak ve soğuk içecek alternatifleriyle servis deneyimini tamamlıyoruz.',
+  },
+  {
+    icon: <LuSalad className="text-[#4d592b] size-12" />,
+    title: 'Salata',
+    description:
+      'Taze sebzelerle hazırlanan ferah salata çeşitleriyle menüye hafiflik ve denge katıyoruz.',
+  },
+  {
+    icon: <LuDessert className="text-[#4d592b] size-12" />,
+    title: 'Tatlı',
+    description:
+      'Yemek sonrası keyfi artıran geleneksel ve modern tatlı alternatifleriyle menüyü tatlı bir finalle bitiriyoruz.',
+  },
 ];
 
 export default function MenuSection() {
@@ -92,7 +102,7 @@ export default function MenuSection() {
         </div>
 
         {/* Card'lar */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -107,10 +117,10 @@ export default function MenuSection() {
                 </div>
 
                 {/* İçerik */}
-                <h3 className="text-2xl font-bold text-dark mb-4">
+                <h3 className="lg:text-2xl text-xl font-bold text-dark mb-4">
                   {service.title}
                 </h3>
-                <p className="text-base text-gray-600 font-sans">
+                <p className="text-sm lg:text-base text-gray-600 font-sans">
                   {service.description}
                 </p>
                 <Link

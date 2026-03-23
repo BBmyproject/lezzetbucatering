@@ -49,7 +49,7 @@ export default function DeliverySection() {
               >
                 <div className="relative w-full h-full rounded-2xl overflow-hidden">
                   <img
-                    src="/images/delivery-main.jpg"
+                    src="/images/delivery-main.jpeg"
                     alt="Delivery Main"
                     className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-300"
                     width={600}

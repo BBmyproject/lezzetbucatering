@@ -16,7 +16,7 @@ const events: EventCard[] = [
       'Ana faaliyet alanlarımızdan biri olan Tabldot Yemek (Taşıma Yemek) hizmeti ile, işyerlerinize yemeklerinizi Lezzet Bu Catring Yemek güvencesiyle ulaştırıyoruz.',
   },
   {
-    image: '/images/event-2.jpg',
+    image: '/images/event-2.jpeg',
     title: 'Taşıma Yemek',
     description:
       'Taşıma paket yemek hizmetimizde yemekleriniz tek tek porsiyonlanır ve özenle paketlenir. Paket yemek servisi sayesinde hızlı ve lezzetli catering çözümleri sunarız.',
@@ -102,10 +102,10 @@ export default function EventsSection() {
 
                 {/* İçerik */}
                 <div className="py-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-dark mb-4">
+                  <h3 className="text-xl lg:text-2xl font-bold text-dark mb-4">
                     {event.title}
                   </h3>
-                  <p className="text-base text-gray-600 font-sans flex-grow">
+                  <p className="text-sm lg:text-base text-gray-600 font-sans flex-grow">
                     {event.description}
                   </p>
                 </div>
