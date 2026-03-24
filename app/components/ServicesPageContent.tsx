@@ -60,7 +60,7 @@ export default function ServicesPageContent() {
 
   return (
     <>
-      <section className="relative flex h-[min(420px,55vw)] min-h-[280px] w-full items-center justify-center overflow-hidden bg-[#f58220]">
+      <section className="relative flex h-[min(420px,55vw)] min-h-[280px] w-full items-center justify-center overflow-hidden bg-[#56514c]">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="/images/hero-banner.jpg"

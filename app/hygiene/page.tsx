@@ -108,7 +108,7 @@ export default function HijyenPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] flex items-center justify-center overflow-hidden bg-[#f58220]">
+      <section className="relative w-full h-[400px] flex items-center justify-center overflow-hidden bg-[#56514c]">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="/images/hero-banner.jpg"
