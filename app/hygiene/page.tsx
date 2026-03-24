@@ -108,7 +108,7 @@ export default function HijyenPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] flex items-center justify-center overflow-hidden bg-[#4d592b]">
+      <section className="relative w-full h-[400px] flex items-center justify-center overflow-hidden bg-[#f58220]">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="/images/hero-banner.jpg"
@@ -166,7 +166,7 @@ export default function HijyenPage() {
               >
                 <div className="flex flex-col items-start gap-6">
                   {/* Icon */}
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#4d592b12] flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#f5822012] flex items-center justify-center">
                     {section.icon}
                   </div>
 

@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header className='inline lg:block'>
       {/* Header Top */}
-      <div className="bg-[#4d592b] py-[6px] lg:py-[9px]">
+      <div className="bg-[#f58220] py-[6px] lg:py-[9px]">
         <div className="container mx-auto max-w-[1320px] px-4">
           <div className="flex items-center justify-between">
             {/* Sol Taraf - İletişim Bilgileri */}
@@ -63,19 +63,19 @@ export default function Header() {
             <div className="flex items-center gap-1.5 ml-auto">
               <Link
                 href="https://www.instagram.com/lezzetbucatering"
-                className="group text-white transition-all bg-[#737865] p-1.5 lg:p-2 rounded-full hover:bg-white"
+                className="group text-white transition-all bg-[#ca7326] p-1.5 lg:p-2 rounded-full hover:bg-white"
                 aria-label="Instagram"
                 target="_blank"
               >
-                <FaInstagram className="text-white text-xs group-hover:text-[#737865] transition" />
+                <FaInstagram className="text-white text-xs group-hover:text-[#ca7326] transition" />
               </Link>
               <Link
                 href="#"
-                className="group text-white transition-all bg-[#737865] p-1.5 lg:p-2 rounded-full hover:bg-white"
+                className="group text-white transition-all bg-[#ca7326] p-1.5 lg:p-2 rounded-full hover:bg-white"
                 aria-label="LinkedIn"
                 target="_blank"
               >
-                <FaLinkedin className="text-white text-xs group-hover:text-[#737865] transition" />
+                <FaLinkedin className="text-white text-xs group-hover:text-[#ca7326] transition" />
               </Link>
             </div>
           </div>

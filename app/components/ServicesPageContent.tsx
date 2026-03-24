@@ -60,7 +60,7 @@ export default function ServicesPageContent() {
 
   return (
     <>
-      <section className="relative flex h-[min(420px,55vw)] min-h-[280px] w-full items-center justify-center overflow-hidden bg-[#4d592b]">
+      <section className="relative flex h-[min(420px,55vw)] min-h-[280px] w-full items-center justify-center overflow-hidden bg-[#f58220]">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="/images/hero-banner.jpg"
@@ -109,7 +109,7 @@ export default function ServicesPageContent() {
               Aşağıda sunduğumuz hizmet alanlarına göre teklif almak için{' '}
               <Link
                 href="/contact"
-                className="font-medium text-[#4d592b] underline decoration-[#4d592b]/30 underline-offset-2 transition hover:text-[#f58220] hover:decoration-[#f58220]/40"
+                className="font-medium text-[#f58220] underline decoration-[#f58220]/30 underline-offset-2 transition hover:text-[#f58220] hover:decoration-[#f58220]/40"
               >
                 iletişim
               </Link>{' '}
@@ -132,10 +132,10 @@ export default function ServicesPageContent() {
                   href={`/services/${service.slug}`}
                   className="group flex h-full flex-col items-center rounded-lg border border-gray-200 bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg"
                 >
-                  <div className="mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#4d592b12] transition group-hover:bg-[#4d592b20]">
+                  <div className="mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#f5822012] transition group-hover:bg-[#f5822020]">
                     <ServiceAreaIcon areaKey={service.key} />
                   </div>
-                  <h2 className="mb-4 text-xl font-bold leading-snug text-dark transition group-hover:text-[#4d592b]">
+                  <h2 className="mb-4 text-xl font-bold leading-snug text-dark transition group-hover:text-[#f58220]">
                     {service.title}
                   </h2>
                   <p className="mb-5 flex-grow font-sans text-base text-gray-600">

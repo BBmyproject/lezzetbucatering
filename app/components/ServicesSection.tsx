@@ -55,7 +55,7 @@ export default function ServicesSection() {
           Tüm hizmet detaylarımız için{' '}
           <Link
             href="/services"
-            className="font-medium text-[#4d592b] underline decoration-[#4d592b]/30 underline-offset-2 transition hover:text-[#f58220] hover:decoration-[#f58220]/40"
+            className="font-medium text-[#f58220] underline decoration-[#f58220]/30 underline-offset-2 transition hover:text-[#f58220] hover:decoration-[#f58220]/40"
           >
             Hizmetlerimiz
           </Link>{' '}
@@ -74,10 +74,10 @@ export default function ServicesSection() {
                 href={`/services/${service.slug}`}
                 className="group flex h-full flex-col items-center rounded-lg border border-gray-200 bg-white p-8 text-center transition-shadow duration-300 hover:shadow-lg"
               >
-                <div className="mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#4d592b12] transition group-hover:bg-[#4d592b20]">
+                <div className="mb-6 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#f5822012] transition group-hover:bg-[#f5822020]">
                   <ServiceAreaIcon areaKey={service.key} />
                 </div>
-                <h3 className="mb-4 text-xl font-bold leading-snug text-dark transition group-hover:text-[#4d592b]">
+                <h3 className="mb-4 text-xl font-bold leading-snug text-dark transition group-hover:text-[#f58220]">
                   {service.title}
                 </h3>
                 <p className="mb-4 flex-grow font-sans text-base text-gray-600">

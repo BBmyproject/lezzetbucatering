@@ -66,7 +66,7 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
             <div
               className={`fade-up-contact-card ${
                 isVisible ? 'fade-up-visible' : ''
-              } absolute bottom-0 right-0 bg-[#4d592b] rounded-2xl px-8 md:px-16 py-8 md:py-16 text-white shadow-xl`}
+              } absolute bottom-0 right-0 bg-[#f58220] rounded-2xl px-8 md:px-16 py-8 md:py-16 text-white shadow-xl`}
             >
               <h3 className="text-lg md:text-2xl font-medium mb-6">
                 Bizimle iletişime geç

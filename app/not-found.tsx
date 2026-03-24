@@ -5,7 +5,7 @@ export default function NotFound() {
     <main className="min-h-[min(70vh,720px)] bg-[#f9f9f7] px-4 py-16 md:py-24">
       <div className="container mx-auto flex max-w-[1320px] flex-col items-center text-center">
         <p
-          className="font-secondary text-7xl font-medium leading-none text-[#4d592b] md:text-8xl"
+          className="font-secondary text-7xl font-medium leading-none text-[#f58220] md:text-8xl"
           aria-hidden
         >
           404
@@ -28,7 +28,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/contact"
-            className="rounded-[118px] border-[1.5px] border-[#4d592b] bg-[#4d592b] px-8 py-3 font-sans text-base font-bold text-white transition-colors hover:border-[#3d4522] hover:bg-[#3d4522]"
+            className="rounded-[118px] border-[1.5px] border-[#f58220] bg-[#f58220] px-8 py-3 font-sans text-base font-bold text-white transition-colors hover:border-[#3d4522] hover:bg-[#3d4522]"
           >
             İletişim
           </Link>

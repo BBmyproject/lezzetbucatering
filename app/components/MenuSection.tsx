@@ -17,37 +17,37 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
-    icon: <RiBowlLine className="text-[#4d592b] size-12" />,
+    icon: <RiBowlLine className="text-[#f58220] size-12" />,
     title: 'Çorba',
     description:
       'Günün menüsüne sıcak bir başlangıç sunan, mevsimine uygun malzemelerle hazırlanan çorba seçenekleri.',
   },
   {
-    icon: <PiBowlFood className="text-[#4d592b] size-12" />,
+    icon: <PiBowlFood className="text-[#f58220] size-12" />,
     title: 'Yardımcı Yemekler',
     description:
       'Ana yemeği destekleyen pilav, makarna ve benzeri yardımcı yemeklerle dengeli ve doyurucu tabaklar.',
   },
   {
-    icon: <LuCookingPot className="text-[#4d592b] size-12" />,
+    icon: <LuCookingPot className="text-[#f58220] size-12" />,
     title: 'Ana Yemek',
     description:
       'Özenle pişirilen etli, tavuklu veya sebzeli ana yemek seçenekleriyle her öğünde güçlü lezzet sunuyoruz.',
   },
   {
-    icon: <MdLocalDrink className="text-[#4d592b] size-12" />,
+    icon: <MdLocalDrink className="text-[#f58220] size-12" />,
     title: 'İçecek',
     description:
       'Menüye eşlik eden sıcak ve soğuk içecek alternatifleriyle servis deneyimini tamamlıyoruz.',
   },
   {
-    icon: <LuSalad className="text-[#4d592b] size-12" />,
+    icon: <LuSalad className="text-[#f58220] size-12" />,
     title: 'Salata',
     description:
       'Taze sebzelerle hazırlanan ferah salata çeşitleriyle menüye hafiflik ve denge katıyoruz.',
   },
   {
-    icon: <LuDessert className="text-[#4d592b] size-12" />,
+    icon: <LuDessert className="text-[#f58220] size-12" />,
     title: 'Tatlı',
     description:
       'Yemek sonrası keyfi artıran geleneksel ve modern tatlı alternatifleriyle menüyü tatlı bir finalle bitiriyoruz.',
@@ -112,7 +112,7 @@ export default function MenuSection() {
             >
               <div className="bg-white border border-gray-200 rounded-lg py-8 px-4 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col items-center text-center">
                 {/* Icon */}
-                <div className="mb-6 flex justify-center w-[100px] h-[100px] rounded-full bg-[#4d592b12] items-center">
+                <div className="mb-6 flex justify-center w-[100px] h-[100px] rounded-full bg-[#f5822012] items-center">
                   {service.icon}
                 </div>
 

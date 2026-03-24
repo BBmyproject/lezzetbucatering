@@ -68,7 +68,7 @@ export default function ServiceDetailContent({
 
   return (
     <>
-      <section className="relative flex h-[min(380px,50vw)] min-h-[240px] w-full items-center justify-center overflow-hidden bg-[#4d592b]">
+      <section className="relative flex h-[min(380px,50vw)] min-h-[240px] w-full items-center justify-center overflow-hidden bg-[#f58220]">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src="/images/hero-banner.jpg"
@@ -119,7 +119,7 @@ export default function ServiceDetailContent({
                 isMainVisible ? 'fade-up-visible' : ''
               }`}
             >
-              <div className="mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#4d592b12]">
+              <div className="mb-8 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#f5822012]">
                 <ServiceAreaIcon areaKey={service.key} />
               </div>
               <p className="font-sans text-lg leading-relaxed text-dark md:text-xl">
@@ -152,7 +152,7 @@ export default function ServiceDetailContent({
                 {service.detailHighlights.map((item, i) => (
                   <li key={i} className="flex gap-3">
                     <span
-                      className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#4d592b]"
+                      className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#f58220]"
                       aria-hidden
                     />
                     <span>{item}</span>
@@ -185,13 +185,13 @@ export default function ServiceDetailContent({
                   isOthersVisible ? 'fade-up-visible' : ''
                 }`}
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#4d592b12] transition group-hover:bg-[#4d592b20]">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#f5822012] transition group-hover:bg-[#f5822020]">
                   <ServiceAreaIcon
                     areaKey={s.key}
-                    className="text-[#4d592b] size-7"
+                    className="text-[#f58220] size-7"
                   />
                 </div>
-                <h3 className="mb-2 font-bold text-dark transition group-hover:text-[#4d592b]">
+                <h3 className="mb-2 font-bold text-dark transition group-hover:text-[#f58220]">
                   {s.title}
                 </h3>
                 <p className="line-clamp-3 font-sans text-sm text-gray-600">

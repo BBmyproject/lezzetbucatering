@@ -8,7 +8,7 @@ import {
   MdOutlineDinnerDining,
 } from 'react-icons/md';
 
-const defaultClass = 'text-[#4d592b] size-12';
+const defaultClass = 'text-[#f58220] size-12';
 
 export default function ServiceAreaIcon({
   areaKey,
