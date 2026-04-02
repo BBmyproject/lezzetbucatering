@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { IoTimeOutline } from 'react-icons/io5';
+import { MdConstruction } from 'react-icons/md';
 import { RiDiscountPercentLine } from 'react-icons/ri';
 
 export default function DeliverySection() {
@@ -152,6 +153,24 @@ export default function DeliverySection() {
                   <div>
                     <h3 className="text-base md:text-xl font-medium text-dark">
                       En İyi Teklif ve Fiyatlar
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* Özellik 3 */}
+              <div
+                className={`fade-up-feature fade-up-feature-2 ${
+                  isVisible ? 'fade-up-visible' : ''
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f58220] flex items-center justify-center">
+                    <MdConstruction className="text-white text-lg" />
+                  </div>
+                  <div>
+                    <h3 className="text-base md:text-xl font-medium text-dark">
+                      Şantiye ve İnşaat alanlarına özel çözümler
                     </h3>
                   </div>
                 </div>
