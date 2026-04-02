@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import { getSiteUrl } from '@/lib/site';
 import Header from './components/Header';
@@ -20,6 +21,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 const siteUrl = getSiteUrl();
+
+const GA_MEASUREMENT_ID = 'G-FFDDN0YDW5';
 
 const defaultTitle =
   'Lezzet Bu Catering - Şantiye Catering & Toplu Yemek Hizmeti,İstanbul Catering';
@@ -81,6 +84,9 @@ export const metadata: Metadata = {
     ],
     apple: '/favicon-apple-touch.png',
   },
+  verification: {
+    google: '0L25FCATiY3stXxo1uDh6IaPNf4yKWago4PEqoLKd6Y',
+  },
 };
 
 export default function RootLayout({
@@ -91,6 +97,18 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${dmSans.variable} ${playfairDisplay.variable} font-sans`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <JsonLd />
         <Header />
         {children}

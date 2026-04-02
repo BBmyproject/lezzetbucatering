@@ -563,6 +563,24 @@ body {
   z-index: -1;
 }
 
+/* İletişim formu — başarı/hata kutusu (Tailwind ile aynı tonlar, sabit renk) */
+.contact-form-feedback {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.contact-form-feedback--success {
+  border: 1px solid #bbf7d0;
+  background-color: #f0fdf4;
+  color: #166534;
+}
+.contact-form-feedback--error {
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
 /* Sabit WhatsApp butonu — hafif sallanma + nabız halkası */
 .whatsapp-float-inner {
   animation: whatsapp-float-y 2.8s ease-in-out infinite;

@@ -20,6 +20,12 @@ export default function ContactPage() {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formFeedback, setFormFeedback] = useState<{
+    type: 'success' | 'error';
+    message: string;
+  } | null>(null);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -27,12 +33,51 @@ export default function ContactPage() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    if (formFeedback) setFormFeedback(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submit logic buraya eklenecek
-    console.log('Form submitted:', formData);
+    setFormFeedback(null);
+    setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+      };
+
+      if (!res.ok) {
+        setFormFeedback({
+          type: 'error',
+          message: data.error || 'Gönderilemedi. Lütfen tekrar deneyin.',
+        });
+        return;
+      }
+
+      setFormFeedback({
+        type: 'success',
+        message: 'Mesajınız alındı. En kısa sürede size dönüş yapacağız.',
+      });
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    } catch {
+      setFormFeedback({
+        type: 'error',
+        message: 'Bağlantı hatası. İnternetinizi kontrol edip tekrar deneyin.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,6 +169,18 @@ export default function ContactPage() {
            }}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
+            {formFeedback && (
+              <div
+                role="alert"
+                className={`contact-form-feedback font-sans ${
+                  formFeedback.type === 'success'
+                    ? 'contact-form-feedback--success'
+                    : 'contact-form-feedback--error'
+                }`}
+              >
+                {formFeedback.message}
+              </div>
+            )}
             {/* Ad Soyad - Yan Yana */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -247,9 +304,10 @@ export default function ContactPage() {
             <div className="pt-1 md:pt-4">
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-[#f58220] text-white font-bold rounded-lg hover:bg-[#d14a00] transition-colors duration-300 font-sans text-base"
+                disabled={isSubmitting}
+                className="w-full md:w-auto px-8 py-4 bg-[#f58220] text-white font-bold rounded-lg hover:bg-[#d14a00] transition-colors duration-300 font-sans text-base disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Gönder
+                {isSubmitting ? 'Gönderiliyor…' : 'Gönder'}
               </button>
             </div>
           </form>
