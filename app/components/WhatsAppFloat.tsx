@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WHATSAPP_NUMBER = '905434566278';
 const DEFAULT_MESSAGE =
-  'Merhaba, Lezzet Bu Catering hakkında bilgi almak istiyorum.';
+  'Merhaba, Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi hakkında bilgi almak istiyorum.';
 
 export default function WhatsAppFloat() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

@@ -99,7 +99,7 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
                 <div className="flex items-start gap-3">
                   <HiLocationMarker className="text-white text-base md:text-lg flex-shrink-0 mt-1" />
                   <p className="text-white text-sm md:text-base font-sans">
-                    Zekeriyaköy Sarıyer/İstanbul
+                    Büyükçekmece / İstanbul
                   </p>
                 </div>
               </div>

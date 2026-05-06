@@ -9,7 +9,7 @@ export const metadata: Metadata = subpageMetadata({
     'Şirket, şantiye, okul, hastane catering; organizasyon, iftar, mevlit ve toplu yemek hizmetleri. İstanbul’da menü, hijyen ve teslimatla uçtan uca çözüm.',
   path: '/services',
   ogDescription:
-    'İftar, mevlit, kurumsal ve toplu yemek organizasyonlarında Lezzet Bu Catering ile profesyonel hizmet.',
+    'İftar, mevlit, kurumsal ve toplu yemek organizasyonlarında Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi ile profesyonel hizmet.',
 });
 
 export default function ServicesPage() {

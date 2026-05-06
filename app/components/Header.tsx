@@ -95,7 +95,7 @@ export default function Header() {
               >
                 <img
                   src="/logo.png"
-                  alt="Lezzet Bu Catering"
+                  alt="Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi"
                   className="h-9 w-auto max-h-11 object-contain object-left lg:h-12 lg:max-h-[52px]"
                   width={180}
                   height={52}
@@ -163,7 +163,7 @@ export default function Header() {
               >
                 <img
                   src="/logo.png"
-                  alt="Lezzet Bu Catering"
+                  alt="Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi"
                   className="h-9 w-auto max-h-10 object-contain object-left"
                   width={160}
                   height={44}

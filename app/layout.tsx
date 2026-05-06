@@ -48,14 +48,15 @@ export const metadata: Metadata = {
     'organizasyon catering',
     'günlük sıcak yemek',
     'Lezzet Bu Catering',
+    'Lezzet BU Catering Gıda Sanayi ve Ticaret Limited Şirketi'
   ],
-  authors: [{ name: 'Lezzet Bu Catering' }],
-  creator: 'Lezzet Bu Catering',
+  authors: [{ name: 'Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi' }],
+  creator: 'Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi',
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
     url: '/',
-    siteName: 'Lezzet Bu Catering',
+    siteName: 'Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi',
     title: defaultTitle,
     description: ogDescription,
     images: [
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
         url: '/oglogo.png',
         width: 1200,
         height: 630,
-        alt: 'Lezzet Bu Catering — profesyonel catering logosu',
+        alt: 'Lezzet Bu Catering — Profesyonel Catering Logosu',
       },
     ],
   },

@@ -10,7 +10,7 @@ export default function JsonLd() {
       {
         '@type': ['Organization', 'LocalBusiness'],
         '@id': `${siteUrl}/#organization`,
-        name: 'Lezzet Bu Catering',
+        name: 'Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi',
         url: siteUrl,
         logo: {
           '@type': 'ImageObject',
@@ -27,7 +27,7 @@ export default function JsonLd() {
         address: {
           '@type': 'PostalAddress',
           streetAddress:
-            'Zekeriyaköy Mah. 5. Cad. Eğrisel Blok No: 7 İç Kapı No: 22',
+            'Hürriyet Mah. Tepecik Cad. B1 Blok No: 38/5A İç Kapı No: 3',
           addressLocality: 'Sarıyer',
           addressRegion: 'İstanbul',
           addressCountry: 'TR',
@@ -45,7 +45,7 @@ export default function JsonLd() {
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         url: siteUrl,
-        name: 'Lezzet Bu Catering',
+        name: 'Lezzet Bu Catering Gıda Sanayi ve Ticaret Limited Şirketi',
         inLanguage: 'tr-TR',
         publisher: { '@id': `${siteUrl}/#organization` },
       },

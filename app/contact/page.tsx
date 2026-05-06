@@ -151,10 +151,9 @@ export default function ContactPage() {
               <h3 className="text-lg md:text-xl font-bold text-dark mb-2 font-sans">
                 Adres
               </h3>
-              <p className="text-base md:text-xl leading-relaxed text-dark font-sans">
-                Zekeriyaköy Mah. 5. Cad. Eğrisel Blok No: 7 İç Kapı No: 22
-                Sarıyer/İstanbul
-              </p>
+              <a href="https://maps.app.goo.gl/xXu693MfdEnaAn3x7" target="_blank" rel="noopener noreferrer" className="text-base md:text-xl leading-relaxed text-dark font-sans hover:text-[#f58220] transition-colors">
+                Hürriyet Mah. Tepecik Cad. B1 Blok No: 38/5A İç Kapı No: 3 Büyükçekmece / İstanbul
+              </a>
             </div>
           </div>
         </div>
@@ -312,6 +311,20 @@ export default function ContactPage() {
             </div>
           </form>
         </div>
+
+        <section className="mt-10 md:mt-14">
+          <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.6608349503344!2d28.519427812113094!3d41.05454551645449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55dfe8e7436bb%3A0x3422189af156d84e!2sLezzet%20BU%20Catering%20G%C4%B1da%20Sanayi%20ve%20Ticaret%20Limited%20%C5%9Eirketi!5e0!3m2!1str!2str!4v1778088242659!5m2!1str!2str"
+              title="Lezzet Bu Catering büyük konum haritası"
+              className="h-[380px] w-full md:h-[460px]"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </section>
       </div>
     </main>
   );

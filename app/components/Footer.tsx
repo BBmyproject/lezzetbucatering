@@ -1,9 +1,14 @@
+ 'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const showFooterMap = pathname !== '/contact';
 
   return (
     <footer className="bg-[#2c2f24] border-t border-gray-200 ">
@@ -105,7 +110,7 @@ export default function Footer() {
               </div>
               <div className="group flex items-center gap-2">
                 <FaMapMarkerAlt className="text-white text-base group-hover:text-[#f58220] transition-colors" />
-                <span className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors">Zekeriyaköy Mah. 5. Cad. Eğrisel Blok No: 7 İç Kapı No: 22 Sarıyer/İstanbul</span>
+                <a href="https://maps.app.goo.gl/xXu693MfdEnaAn3x7" target="_blank" rel="noopener noreferrer" className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors">Hürriyet Mah. Tepecik Cad. B1 Blok No: 38/5A İç Kapı No: 3 Büyükçekmece / İstanbul</a>
               </div>
             </div>
           </div>
@@ -131,6 +136,19 @@ export default function Footer() {
                 <FaLinkedin className="text-white text-xs group-hover:text-[#737865] transition" />
               </Link>
             </div>
+            {showFooterMap && (
+              <div className="mt-5 overflow-hidden rounded-xl border border-[#adb29e]/30">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.6608349503344!2d28.519427812113094!3d41.05454551645449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55dfe8e7436bb%3A0x3422189af156d84e!2sLezzet%20BU%20Catering%20G%C4%B1da%20Sanayi%20ve%20Ticaret%20Limited%20%C5%9Eirketi!5e0!3m2!1str!2str!4v1778088242659!5m2!1str!2str"
+                  title="Lezzet Bu Catering konum haritası"
+                  className="h-36 w-full"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            )}
           </div>
         </div>
 
