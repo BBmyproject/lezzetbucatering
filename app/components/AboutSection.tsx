@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { HiLocationMarker } from 'react-icons/hi';
+import { trackPhoneClick } from '@/lib/tracking';
 
 interface AboutSectionProps {
   showButton?: boolean;
@@ -78,6 +79,7 @@ export default function AboutSection({ showButton = true }: AboutSectionProps) {
                   <FaPhoneAlt className="text-white text-base md:text-lg flex-shrink-0" />
                   <a
                     href="tel:+905434566278"
+                    onClick={() => trackPhoneClick('about_section')}
                     className="text-white text-sm md:text-base hover:opacity-80 transition-opacity font-sans"
                   >
                     +90 543 456 62 78

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { trackPhoneClick } from '@/lib/tracking';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -94,6 +95,7 @@ export default function Footer() {
                 <FaPhoneAlt className="text-white text-base group-hover:text-[#f58220] transition-colors" />
                 <a
                   href="tel:+905434566278"
+                  onClick={() => trackPhoneClick('footer_contact')}
                   className="text-[#dbdfd0] group-hover:text-[#f58220] transition-colors"
                 >
                   +90 543 456 62 78

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useLayoutEffect } from 'react';
+import { trackPhoneClick } from '@/lib/tracking';
 
 export default function ContactPage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -117,6 +118,7 @@ export default function ContactPage() {
               </h3>
               <a
                 href="tel:+905434566278"
+                onClick={() => trackPhoneClick('contact_page')}
                 className="text-lg md:text-xl text-[#f58220] font-sans font-bold hover:underline transition-colors"
               >
                 +90 543 456 62 78

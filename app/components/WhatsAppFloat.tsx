@@ -1,6 +1,7 @@
 'use client';
 
 import { FaWhatsapp } from 'react-icons/fa';
+import { trackWhatsAppClick } from '@/lib/tracking';
 
 const WHATSAPP_NUMBER = '905434566278';
 const DEFAULT_MESSAGE =
@@ -16,6 +17,7 @@ export default function WhatsAppFloat() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppClick('floating_button')}
       className="group fixed z-[100] block h-14 w-14 transition-transform duration-300 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366] md:h-16 md:w-16"
       style={{
         bottom: 'max(1.25rem, env(safe-area-inset-bottom, 0px))',

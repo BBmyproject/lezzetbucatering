@@ -7,6 +7,7 @@ import { FiMail } from 'react-icons/fi';
 import { FaInstagram, FaLinkedin, FaTimes } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import { trackPhoneClick } from '@/lib/tracking';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,7 @@ export default function Header() {
                 <FaPhoneAlt className="text-white text-base" />
                 <a
                   href="tel:+905434566278"
+                  onClick={() => trackPhoneClick('header_top')}
                   className="hidden lg:block text-white text-base hover:opacity-80 transition-opacity"
                 >
                   +90 543 456 62 78

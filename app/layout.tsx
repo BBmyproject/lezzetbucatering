@@ -22,7 +22,8 @@ const playfairDisplay = Playfair_Display({
 
 const siteUrl = getSiteUrl();
 
-const GA_MEASUREMENT_ID = 'G-FFDDN0YDW5';
+const GA_MEASUREMENT_ID = 'G-FGYLBPKCSZ';
+const GOOGLE_ADS_ID = 'AW-18100718519';
 
 const defaultTitle =
   'Lezzet Bu Catering - Şantiye Catering & Toplu Yemek Hizmeti,İstanbul Catering';
@@ -108,6 +109,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
         <JsonLd />
