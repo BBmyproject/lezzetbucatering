@@ -17,6 +17,7 @@ function trackContactEvent(eventName: string, eventLabel: string) {
     event_category: 'contact',
     event_label: eventLabel,
     send_to: 'AW-18100718519',
+    transport_type: 'beacon',
   });
 }
 

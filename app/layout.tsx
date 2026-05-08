@@ -4,6 +4,7 @@ import { DM_Sans, Playfair_Display } from 'next/font/google';
 import { getSiteUrl } from '@/lib/site';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CallFloat from './components/CallFloat';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import JsonLd from './components/JsonLd';
 import './globals.css';
@@ -116,6 +117,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CallFloat />
         <WhatsAppFloat />
       </body>
     </html>
